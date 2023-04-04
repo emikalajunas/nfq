@@ -105,7 +105,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
 <div class=\"card shadow-sm\">
     <img src=\"{{ article.image }}\" class=\"card-img-top\">
     <div class=\"card-body\">
-        <label>Updated at: {{article.updatedAt}}</label>
+        <label>Updated at: {{ article.updatedAt }}</label>
         <h5 class=\"card-title\">{{ article.title }}</h5>
         <p class=\"card-text\">
             {% set cutoff = 80 %}

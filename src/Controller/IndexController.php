@@ -14,7 +14,7 @@ class IndexController extends AbstractController
     {
         return $this->render('pages/index.html.twig', [
 //-----------------------------------------------------------------            
-//20230404 gets DESC articles by updateAt, limits max 6 (thank u stackoverflow.com)
+//20230404 gets DESC articles by updateAt time, limits max 6 (thank u stackoverflow.com)
 //-----------------------------------------------------------------    
             'articles' => $articleRepository->findBy(array(),array('updatedAt'=>'DESC'),6,0)
         ]);
