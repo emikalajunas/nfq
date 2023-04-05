@@ -23,15 +23,17 @@ class EditController extends AbstractController
         Article $article,
         EntityManagerInterface $entityManager
     ): Response {
+       
+        
         $form = $this->createForm(ArticleeditType::class, $article);
         $form->handleRequest($request);
-        $updatedAt = $article->updatedAt = date("l jS \of F Y h:i:s");
+        $updatedAt = $article->setUpdatedAt(date("l jS \of F Y h:i:s"));
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($article);
             $entityManager->flush();
 //-----------------------------------------------------------------
-//20230404 or use return instead of back button
+//20230404 or use return instead of back button for convenience
 //return $this->redirectToRoute('home');
 //-----------------------------------------------------------------
         }

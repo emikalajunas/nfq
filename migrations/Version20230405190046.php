@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20230405093130 extends AbstractMigration
+final class Version20230405190046 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -30,6 +30,6 @@ final class Version20230405093130 extends AbstractMigration
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE article ADD COLUMN readtime INTEGER DEFAULT NULL');
+        $this->addSql('ALTER TABLE article ADD COLUMN readtime VARCHAR(255) DEFAULT NULL');
     }
 }
