@@ -23,7 +23,7 @@ class EditController extends AbstractController
           $form = $this->createForm(ArticleeditType::class, $article); 
           $form->handleRequest($request); 
           $updatedAt = $article->updatedAt = date('l jS \of F Y h:i:s');
-         
+          //$readtime = $article->readtime = 123;
         
          if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($article); 

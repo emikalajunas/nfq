@@ -73,7 +73,10 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
         echo "\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
             <small class=\"text-muted\">
-                X mins
+                ";
+        // line 17
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "readtime", [], "any", false, false, false, 17), "html", null, true);
+        echo "
             </small>
         </div>
     </div>
@@ -96,7 +99,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  72 => 14,  68 => 13,  60 => 9,  58 => 8,  53 => 6,  49 => 5,  44 => 3,  40 => 1,);
+        return array (  78 => 17,  72 => 14,  68 => 13,  60 => 9,  58 => 8,  53 => 6,  49 => 5,  44 => 3,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -117,7 +120,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
                 <a href=\"{{ path('article_edit', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
             <small class=\"text-muted\">
-                X mins
+                {{ article.readtime }}
             </small>
         </div>
     </div>

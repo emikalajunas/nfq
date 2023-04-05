@@ -12,6 +12,8 @@ class IndexController extends AbstractController
     #[Route('/', name: 'home')]
     public function list(ArticleRepository $articleRepository): Response
     {
+        
+                $readtime = $article->readtime = 12345;
         return $this->render('pages/index.html.twig', [
 //-----------------------------------------------------------------            
 //20230404 gets DESC articles by updateAt time, limits max 6 (thank u stackoverflow.com)

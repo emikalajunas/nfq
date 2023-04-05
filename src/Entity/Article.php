@@ -26,9 +26,6 @@ class Article
     #[ORM\Column(length: 255, nullable: true)]
     public ?string $updatedAt = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $readtime = null;
-
     /**
      * @return int|null
      */
@@ -93,18 +90,6 @@ class Article
     public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
-
-    public function getReadtime(): ?int
-    {
-        return $this->readtime;
-    }
-
-    public function setReadtime(?int $readtime): self
-    {
-        $this->readtime = $readtime;
 
         return $this;
     }
