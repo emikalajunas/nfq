@@ -18,13 +18,16 @@ class Article
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $text = null;
+    public ?string $text = null;
 
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     public ?string $updatedAt = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    public ?string $readtime = null;
 
     /**
      * @return int|null
@@ -90,6 +93,18 @@ class Article
     public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getReadtime(): ?string
+    {
+        return $this->readtime;
+    }
+
+    public function setReadtime(?string $readtime): self
+    {
+        $this->readtime = $readtime;
 
         return $this;
     }

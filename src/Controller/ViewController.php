@@ -11,8 +11,7 @@ class ViewController extends AbstractController
 {
     #[Route('/article/{id}', name: 'article_view')]
     public function view(Article $article): Response
-    {
-        
+    {        
         return $this->render('pages/view.html.twig', [
             'article' => $article,
         ]);
