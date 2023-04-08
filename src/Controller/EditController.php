@@ -15,7 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 class EditController extends AbstractController
 {
 //-----------------------------------------------------------------
-//2023 04 02: existing acticles nr in db are: 41-46
+//2023 04 02 DB CONTENT: existing acticles nr in db are: 41-46
 //-----------------------------------------------------------------
     #[Route("/article/edit/{id}", name: "article_edit")]
     public function edit(
@@ -33,7 +33,7 @@ class EditController extends AbstractController
             $entityManager->persist($article);
             $entityManager->flush();
 //-----------------------------------------------------------------
-//20230404 or use return instead of back button for convenience
+//20230404 OR FOR CONVENIENCE use return instead of back button 
 //return $this->redirectToRoute('home');
 //-----------------------------------------------------------------
         }
