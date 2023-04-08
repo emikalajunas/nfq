@@ -24,61 +24,6 @@ If you want to learn more about Symfony, here's some helpful resources:
 
 Best of luck!
 
-## Installation
-
-> We assume that you use a UNIX-like operating system like Linux (Ubuntu, i.e.), MacOS, or Windows with WSL
-> 
-> Syntax `command arguments` (for example, `composer install`)  shows CLI commands. Run them in the terminal. 
-
-### Docker Installation 
-
-Requirements:
-* [Docker](https://docs.docker.com/engine/install/) 
-* [Docker Compose](https://docs.docker.com/compose/): if you have a current version of Docker, Docker Compose is installed automatically
-
-Setup:
-1. In current folder (where docker-compose.yml file resides) run `docker compose up` (`docker-compose up` for older Docker versions)
-
-2. When the containers are up, open a new terminal window. 
-
-> It's also possible to run docker compose in detached mode: `docker compose up -d`. In this case, you can run all commands in the same terminal window.
-
-3. Start a bash process in the php container by running `docker exec -it php bash`
-4. Execute the installation script `bash init.sh` OR run commands individually:
-   1. Install dependencies: `composer install`
-   2. Create local SQLite database: `bin/console doctrine:database:create`
-   3. Run database migrations: `bin/console doctrine:migrations:migrate`
-   4. Load data: `bin/console doctrine:fixtures:load`
-5. The application should now be available at http://127.0.0.1:8000
-
-## Native Installation
-
-Requirements:
-* [PHP 8.1](https://www.php.net/)
-* [Composer](https://getcomposer.org/)
-* [SQLite](https://sqlite.org/index.html)
-  * Note: You may need to install the `php-sqlite3` PHP extension 
-* Optionally, Install Symfony CLI: https://symfony.com/download#step-1-install-symfony-cli
-* Check other requirements: https://symfony.com/doc/current/setup.html
-
-Setup: 
-1. From the root directory (where this file `README.md` is located) navigate to the application source directory: `cd code/` 
-2. Execute the installation script `bash init.sh` OR run commands individually:
-   1. Install dependencies: `composer install`
-   2. Create local SQLite database: `bin/console doctrine:database:create`
-   3. Run database migrations: `bin/console doctrine:migrations:migrate`
-   4. Load data: `bin/console doctrine:fixtures:load`
-3. Run web server:
-   * With PHP local server: `php -S localhost:8000 -t public/`
-   * Or with Symfony CLI: `symfony serve`
-4. The application should now be available at http://127.0.0.1:8000
-
-
-### Final Remarks
-
-After the installation you should see the Homepage with preset data:
-
-![Homepage](documentation/assets/homepage.png)
 
 ## Tasks
 
@@ -129,13 +74,19 @@ After the installation you should see the Homepage with preset data:
 2. Make the code available in a public repository (Github, Bitbucket, etc.)
 3. Send the repository URL to Ugnė Rumšaitė <ugne.rumsaite@nfq.lt>
 
+//-------------------------------------------------------------------------------
 2023 04 08 NOTES from Edvinas:
 2.3 How user can change image? With simple hyperlink copy/paste action to form? Or with file uploading? If to follow logic from given task source files (AppFixtures.php->getArticleData()->img stroke): i made it OK.
 2.5 There is allready EDIT button in main page near VIEW. Need another one? 
 3. OPTIONAL: for family circumstances i need more time to make it (i must learn it from scratch :) ) so as it is optinal i am sending rest made task part.
 
-P.S. My symfony knowledge experience till this task was 0 so sorry if some tasks made in lame way :).
-P.P.S. In 2020 spring when quarantine started and Petras written me that NFQ Academy will not start: I was really looking forward to this opportunity so many thanks in advance for task and possibility to try.
- 
+
+P.S Made a lame error from the beggining: did not made any commits to github till end of 2 part of the task.
+P.P.S. My symfony knowledge experience till this task was 0 so sorry if some task parts made in lame way :).
+P.P.P.S. In 2020 spring when quarantine started and Petras written me that NFQ Academy will not start: I was really looking forward to this opportunity so many thanks in advance for task and possibility to try.
+
+edvinas.mikalajunas@gmail.com
+0037067389506
+//-------------------------------------------------------------------------------
 
 
