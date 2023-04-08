@@ -74,7 +74,7 @@ Best of luck!
 2. Make the code available in a public repository (Github, Bitbucket, etc.)
 3. Send the repository URL to Ugnė Rumšaitė <ugne.rumsaite@nfq.lt>
 
-//-------------------------------------------------------------------------------
+//-----------------------------------------------------
 2023 04 08 NOTES from Edvinas:
 2.3 How user can change image? With simple hyperlink copy/paste action to form? Or with file uploading? If to follow logic from given task source files (AppFixtures.php->getArticleData()->img stroke): i made it OK.
 2.5 There is allready EDIT button in main page near VIEW. Need another one? 
@@ -87,6 +87,6 @@ P.P.P.S. In 2020 spring when quarantine started and Petras written me that NFQ A
 
 edvinas.mikalajunas@gmail.com
 0037067389506
-//-------------------------------------------------------------------------------
+//-----------------------------------------------------
 
 
